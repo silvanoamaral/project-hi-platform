@@ -1,0 +1,20 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "standard",
+    "plugin:react/recommended"
+  ],
+  "settings": {
+    "react": {
+      "version": "latest"
+    }
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "jest"
+  ],
+  "env": {
+    "jest/globals": true
+  }
+}

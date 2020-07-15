@@ -1,0 +1,94 @@
+@import 'variables.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  color: $primary-color;
+  font-family: $primary-font;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background: $white-color;
+}
+
+a {
+  cursor: pointer;
+}
+
+button:active {
+  border: none;
+  outline: none;
+}
+
+input {
+  width: 100%;
+  padding: 10px 0;
+  color: $gray-color;
+  line-height: 1.5;
+  text-indent: 10px;
+  border: 1px solid $light-gray-color;
+  border-radius: 5px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  > div {
+    padding: 0 15px;
+
+    &.content {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 0;
+
+      @media (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .col {
+        width: 90%;
+        margin: 0 auto;
+
+        @media (min-width: 768px) {
+          width: 75%;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
+
+  .message {
+    margin-bottom: 20px;
+    color: $blue-color;
+
+    &.alert {
+      color: $message-error;
+    }
+  }
+}
+
