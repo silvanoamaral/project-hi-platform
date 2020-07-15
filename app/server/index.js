@@ -4,8 +4,8 @@ const path = require('path')
 const app = express()
 const port = process.env.PORT || 3001
 
-const { consolidado } = require('../modules/consolidado')
-app.use('/api/consolidado', consolidado)
+const { obterDados } = require('../modules/obterDados')
+app.use('/api/obterDados', obterDados)
 
 const DIST_DIR = path.join(__dirname, '../../dist')
 const HTML_FILE = path.join(DIST_DIR, 'index.html')
